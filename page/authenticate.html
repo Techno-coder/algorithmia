@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Algorithmia</title>
+</head>
+<body>
+<div class="flex h-screen">
+	<div class="m-auto w-full max-w-xl">
+		<div class="card">
+			<div class="card-heading">Authenticate</div>
+			<input id="session-secret" class="form-field select-all"
+			       type="text" onclick="this.select();" placeholder="Session cookie">
+			<button class="button" type="button">Save</button>
+		</div>
+	</div>
+</div>
+</body>
+<script src="../src/authenticate.ts"></script>
+</html>

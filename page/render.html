@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="prism.css">
+	<title>Algorithmia</title>
+</head>
+<body class="flex justify-center line-numbers">
+<div class="flex flex-row flex-wrap xl:w-4/5">
+	<div id="render-left" class="flex flex-col w-full md:w-2/3 pl-2 pr-2"></div>
+	<div class="flex flex-col w-full md:w-1/3 pl-2 pr-2 md:pl-0">
+		<div id="render-right"></div>
+		<div id="render-right-end">
+			<div id="submissions-card" class="card hidden">
+				<div class="card-heading">Submissions</div>
+				<div id="submissions"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-container">
+	<div id="error" class="modal text-center" hidden>
+		Failed to load problem. Are you
+		<a href="authenticate.html" class="link">authenticated</a>?
+		<a href="index.html" class="button block">Return</a>
+	</div>
+</div>
+<div id="loader" class="loader-base">
+	<div class="m-auto">
+		<img src="spinner.svg" class="animate-spin w-24" alt="Loading">
+	</div>
+</div>
+<template id="blank-card">
+	<div id="card" class="card">
+		<div id="heading" class="card-heading"></div>
+	</div>
+</template>
+<template id="auxiliary-card">
+	<div class="card">
+		<div class="card-heading">Auxiliary</div>
+		<b>Input:</b>
+		<p id="auxiliary-input"></p>
+		<b>Output:</b>
+		<p id="auxiliary-output"></p>
+		<b>Memory:</b>
+		<p id="auxiliary-memory"></p>
+		<b>Time:</b>
+		<p id="auxiliary-time"></p>
+	</div>
+</template>
+<template id="information-card">
+	<div id="information" class="card">
+		<div class="card-heading">
+			<a id="link" class="hover:underline" target="_blank"></a>
+		</div>
+		<input id="select-file" type="file" class="w-4/5" hidden>
+	</div>
+</template>
+<template id="sample-card">
+	<div class="card">
+		<div class="card-heading">Sample Case -
+			<span id="sample-index"></span></div>
+		<div class="flex flex-row">
+			<div class="w-1/2 mr-2">
+				<div class="font-bold mb-2">Input</div>
+				<pre><code id="sample-input" class="language-none"></code></pre>
+			</div>
+			<div class="w-1/2 ml-2">
+				<div class="font-bold mb-2">Output</div>
+				<pre><code id="sample-output" class="language-none"></code></pre>
+			</div>
+		</div>
+	</div>
+</template>
+<template id="submission-item">
+	<a id="submission-link" target="_blank" class="item">
+		<span id="submission-date"></span>
+		<span id="submission-score" class="float-right"></span>
+	</a>
+</template>
+<script src="../src/render.ts"></script>
+</body>
+</html>

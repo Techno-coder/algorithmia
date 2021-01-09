@@ -1,0 +1,114 @@
+@import '../node_modules/katex/dist/katex.min.css';
+
+body {
+    @apply text-3xl bg-gray-900 text-gray-800 pt-2
+}
+
+@screen sm {
+    body {
+        @apply text-base
+    }
+}
+
+table {
+    margin: 1em auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+th {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+@tailwind base;
+@tailwind components;
+
+.loader-base {
+    @apply flex w-screen h-screen fixed bg-gray-900
+}
+
+.card {
+    @apply rounded shadow-lg bg-white mb-2 px-6 py-4
+}
+
+.card-heading {
+    @apply font-bold text-5xl mb-2
+}
+
+@screen sm {
+    .card-heading {
+        @apply text-2xl
+    }
+}
+
+.item {
+    @apply rounded bg-gray-100 mb-1.5 px-4 py-2 border border-gray-200 block
+}
+
+.item:hover {
+    @apply border-gray-500
+}
+
+.link {
+    @apply hover:underline text-blue-600 hover:text-blue-800
+}
+
+.alert {
+    @apply border px-4 py-3 rounded mb-2
+}
+
+.modal-container {
+    @apply flex justify-center items-center fixed w-screen h-screen pointer-events-none
+}
+
+.modal {
+    width: 25rem;
+    @apply card shadow-2xl pointer-events-auto
+}
+
+.form-field {
+    @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight
+}
+
+.form-field:focus {
+    @apply outline-none bg-white border-gray-400
+}
+
+.button {
+    @apply bg-blue-500 text-white font-bold mt-2 py-1 px-2 rounded
+}
+
+.button:hover {
+    @apply bg-blue-700
+}
+
+.button:focus {
+    @apply outline-none
+}
+
+ol, ul {
+    padding-left: 1em;
+}
+
+li {
+    list-style-type: disc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    @apply mt-4
+}
+
+@tailwind utilities;
