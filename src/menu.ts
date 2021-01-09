@@ -48,8 +48,11 @@ function menuItem(label: string, run: () => void, bind?: string): Element {
     let item = document.createElement('div');
     item.classList.add('item');
     if (bind != undefined) {
-        hotkeys(bind, () => run());
         item.innerHTML = `<b>${bind}</b> - `;
+        hotkeys(bind, (e) => {
+            e.preventDefault();
+            run();
+        });
     }
 
     item.innerHTML += label;
