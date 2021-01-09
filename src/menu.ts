@@ -36,9 +36,9 @@ function menuModal(): Element {
 
 function menuItems(node: Element) {
     node.append(menuItem('Open Problem', () =>
-        window.location.href = '/index.html', 'O'));
+        window.location.href = 'index.html', 'O'));
     node.append(menuItem('Authenticate', () =>
-        window.location.href = '/authenticate.html'));
+        window.location.href = 'authenticate.html'));
     node.append(menuItem('Clear caches', () =>
         localStorage.clear()));
     node.append(menuItem('Help', toggleMenu, '/'));
