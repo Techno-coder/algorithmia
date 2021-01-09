@@ -23,6 +23,6 @@
 	],
 	"scripts": {
 		"watch": "parcel page/*.html",
-		"build": "parcel build page/*.html"
+		"build": "parcel build page/*.html --public-url ./"
 	}
 }
